@@ -32,6 +32,7 @@ SOONG_CONFIG_lineageGlobalVars += \
     bootloader_message_offset \
     disable_bluetooth_le_read_buffer_size_v2 \
     disable_bluetooth_le_set_host_feature \
+    bootloader_message_offset \
     gralloc_handle_has_reserved_size \
     camera_needs_client_info_lib \
     needs_camera_boottime \
