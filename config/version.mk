@@ -2,8 +2,8 @@ PRODUCT_VERSION_MAJOR = 1
 PRODUCT_VERSION_MINOR = 1
 
 RISING_FLAVOR := Tiramisu
-RISING_VERSION := 1.1
-RISING_CODENAME := Babylon
+RISING_VERSION := 1.5
+RISING_CODENAME := Enigma
 RISING_CODE := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)
 
 CURRENT_DEVICE=$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)
@@ -26,7 +26,7 @@ ifeq ($(filter $(CURRENT_DEVICE), $(DEVICE_LIST)), $(CURRENT_DEVICE))
        $(warning *    Please contact current official maintainer before distributing  *)
        $(warning *              the current build to the community.                   *)
        $(warning **********************************************************************)
-       RISING_BUILDTYPE := UNOFFICIAL
+       RISING_BUILDTYPE := DarkRising
      endif
   endif
 else
@@ -35,7 +35,7 @@ else
      $(error *     A violation has been detected, aborting build      *)
      $(error **********************************************************)
    endif
-  RISING_BUILDTYPE := COMMUNITY
+  RISING_BUILDTYPE := DarkRising
 endif
 
 LINEAGE_VERSION_APPEND_TIME_OF_DAY ?= true
