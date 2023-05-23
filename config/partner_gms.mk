@@ -29,7 +29,10 @@ ifeq ($(WITH_GMS),true)
         ifneq ($(GMS_MAKEFILE),)
             $(call inherit-product, vendor/partner_gms/products/$(GMS_MAKEFILE))
         else
-            $(call inherit-product-if-exists, vendor/partner_gms/products/gms.mk)
+            $(call inherit-product-if-exists, vendor/gms/products/gms.mk)
+	    include vendor/gms/products/board.mk
+	    PRODUCT_PRODUCT_PROPERTIES += \
+    		ro.boot.vendor.overlay.theme=com.android.internal.systemui.navbar.gestural
         endif
 
         # Specify the mainline module makefile you want to use, for example:
