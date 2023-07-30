@@ -44,6 +44,7 @@ SOONG_CONFIG_lineageGlobalVars += \
     target_health_charging_control_supports_toggle \
     camera_needs_client_info_lib \
     needs_camera_boottime \
+    target_alternative_futex_waiters \
     uses_oplus_camera \
     uses_nothing_camera \
     target_init_vendor_lib \
@@ -80,6 +81,7 @@ SOONG_CONFIG_lineageGlobalVars_uses_egl_display_array := $(TARGET_USES_EGL_DISPL
 SOONG_CONFIG_lineageNvidiaVars_uses_nvidia_enhancements := $(NV_ANDROID_FRAMEWORK_ENHANCEMENTS)
 SOONG_CONFIG_lineageQcomVars_supports_extended_compress_format := $(AUDIO_FEATURE_ENABLED_EXTENDED_COMPRESS_FORMAT)
 SOONG_CONFIG_lineageQcomVars_uses_pre_uplink_features_netmgrd := $(TARGET_USES_PRE_UPLINK_FEATURES_NETMGRD)
+SOONG_CONFIG_lineageGlobalVars_target_alternative_futex_waiters := $(TARGET_ALTERNATIVE_FUTEX_WAITERS)
 
 # Set default values
 BOOTLOADER_MESSAGE_OFFSET ?= 0
